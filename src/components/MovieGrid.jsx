@@ -1,8 +1,27 @@
+import { Link } from 'react-router-dom';
+import axios from 'axios'; 
+import { useEffect } from 'react';
+
 function MovieGrid() {
+  const URL = 'https://api.andrespecht.dev/movies';
+
+  useEffect(() => {
+    async function getMovies() {
+      try {
+        const response = (await axios.get(URL)).data.response;
+        console.log(response);
+      } catch (error) {
+        console.error(error);
+      }
+    }
+  
+    getMovies();
+  }, []); // Empty dependency array means this effect runs once on mount
+
   return (
     <>
       <div className="grid-container">
-        <a href="">
+        <Link to=''>
           <div className="column">
             <div className="content-container flex">
               <figure>
@@ -14,7 +33,7 @@ function MovieGrid() {
               </div>
             </div>
           </div>
-        </a>
+        </Link>
         {/* Repeat the above div for each movie */}
       </div>
     </>
