@@ -92,6 +92,16 @@ img {
   border-radius: 0.5rem;
 }
 
+.content-text p:first-child {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.content-text p:nth-child(2) {
+  margin-left: 1rem;
+}
+
 @media (max-width: 1020px) {
   .grid-container {
     grid-template-columns: repeat(4, minmax(0, 1fr));

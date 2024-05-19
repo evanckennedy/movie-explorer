@@ -1,15 +1,18 @@
 import { Link } from 'react-router-dom';
 import axios from 'axios'; 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 function MovieGrid() {
+  const [movies, setMovies] = useState([]);
+
   const URL = 'https://api.andrespecht.dev/movies';
 
   useEffect(() => {
     async function getMovies() {
       try {
         const response = (await axios.get(URL)).data.response;
-        console.log(response);
+        setMovies(response);
+        console.log(movies);
       } catch (error) {
         console.error(error);
       }
@@ -21,20 +24,22 @@ function MovieGrid() {
   return (
     <>
       <div className="grid-container">
-        <Link to=''>
+        {movies.map(movie => (
+          <Link to='' key={movie._id}>
           <div className="column">
             <div className="content-container flex">
               <figure>
-                <img src="https://raw.githubusercontent.com/mrspecht/media/main/img/jurassic-park.jpg" alt="" />
+                <img src={movie.poster} alt={movie.title} />
               </figure>
               <div className="content-text flex justify-between">
-                <p>Jurassic Park</p>
-                <p>1993</p>
+                <p>{movie.title}</p>
+                <p>{movie.year}</p>
               </div>
             </div>
           </div>
         </Link>
-        {/* Repeat the above div for each movie */}
+        )
+        )}
       </div>
     </>
   )
