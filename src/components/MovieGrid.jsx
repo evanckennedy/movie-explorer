@@ -12,7 +12,6 @@ function MovieGrid() {
       try {
         const response = (await axios.get(URL)).data.response;
         setMovies(response);
-        console.log(movies);
       } catch (error) {
         console.error(error);
       }
@@ -25,7 +24,7 @@ function MovieGrid() {
     <>
       <div className="grid-container">
         {movies.map(movie => (
-          <Link to='' key={movie._id}>
+          <Link to={`/movie/${movie.slug}`} key={movie._id}>
           <div className="column">
             <div className="content-container flex">
               <figure>
