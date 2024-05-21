@@ -26,6 +26,10 @@
   gap: 2rem;
 }
 
+.gap-30 {
+  gap: 3rem;
+}
+
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*  Base                                                 */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
@@ -123,6 +127,11 @@ a, a:visited {
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*  Movie grid                                           */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+.information-container {
+  flex: 1;
+  max-width: 60rem;
+}
+
 .movie-poster {
   width: 26rem;
 }
@@ -147,4 +156,10 @@ h2 {
   background-color: rgb(255 255 255 / 0.05);
   border: 0.5px solid rgb(255 255 255 / 0.15);
   border-radius: 50px;
+}
+
+@media (max-width: 600px) {
+  .movie-container {
+    flex-direction: column;
+  }
 }

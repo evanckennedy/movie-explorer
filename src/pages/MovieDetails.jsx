@@ -30,7 +30,7 @@ function MovieDetails() {
     */
     movie && (
     <>
-      <div className="movie-container">
+      <div className="movie-container flex gap-30">
         <div className="poster-wrapper">
           <figure>
             <img className='movie-poster' src={movie.poster} alt={movie.title}/>
