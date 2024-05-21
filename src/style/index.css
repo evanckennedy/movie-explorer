@@ -65,8 +65,12 @@ h1 {
   font-size: 1.7rem;
 }
 
+img {
+  border-radius: 0.5rem;
+}
+
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-/*  Movie grid                                           */
+/*  Movies grid                                          */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 .grid-container {
   display: grid;
@@ -86,10 +90,6 @@ h1 {
 a, a:visited {
   color: var(--white);
   text-decoration: none; 
-}
-
-img {
-  border-radius: 0.5rem;
 }
 
 .content-text p:first-child {
@@ -118,4 +118,33 @@ img {
   .grid-container {
     grid-template-columns: repeat(2, minmax(0, 1fr));    ;
   }
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/*  Movie grid                                           */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+.movie-poster {
+  width: 26rem;
+}
+
+h2, .description {
+  color: var(--white);
+}
+
+h2 {
+  font-weight: 500;
+}
+
+.release-duration, .genres {
+  color: rgba(255, 255, 255, 0.55);
+}
+.release-duration {
+  font-weight: 500;
+}
+
+.genres span {
+  padding: 0.3rem 1.5rem;
+  background-color: rgb(255 255 255 / 0.05);
+  border: 0.5px solid rgb(255 255 255 / 0.15);
+  border-radius: 50px;
 }
