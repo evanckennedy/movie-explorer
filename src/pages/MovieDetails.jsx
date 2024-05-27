@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios'; 
+import { FaPlay } from 'react-icons/fa';
 
 function MovieDetails() {
   let { slug } = useParams();
@@ -48,6 +49,10 @@ function MovieDetails() {
                 <span key={index}>{genre}</span>
               ))}
             </p>
+            <button className='flex play-btn'>
+              <FaPlay />
+              <span>Play movie</span>
+            </button>
           </div>
         </div>
       </div>
