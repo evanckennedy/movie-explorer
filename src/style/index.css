@@ -127,9 +127,17 @@ a, a:visited {
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*  Movie details                                        */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+.movie-container {
+  padding-top: 6rem;
+}
+
 .information-container {
   flex: 1;
   max-width: 60rem;
+}
+
+.information {
+  flex-direction: column;
 }
 
 .movie-poster {
@@ -161,12 +169,23 @@ h2 {
 
 .play-btn {
   align-items: center;
+  justify-content: center;
   background-color: var(--blue);
   gap: .5rem;
-  padding: .8rem 1.5rem;
+  padding: 1rem 0;
+  width: 13rem;
   border-radius: 0.5rem;
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 500;
+  transition: background-color 0.25s ease-in-out;
+
+  &:hover {
+    background-color: #1b89ff;
+  }
+
+  .play-icon {
+    font-size: 1.4rem;
+  }
   
   * {
     color: var(--white);

@@ -38,11 +38,13 @@ function MovieDetails() {
           </figure>
         </div>
         <div className="information-container">
-          <div className="information">
-            <h2>{movie.title}</h2>
-            <p className="release-duration">
-              <span>{movie.year}</span> | <span>{movie.runningTime}</span>
-            </p>
+          <div className="information flex gap-20">
+            <div>
+              <h2>{movie.title}</h2>
+              <p className="release-duration">
+                <span>{movie.year}</span> | <span>{movie.runningTime}</span>
+              </p>
+            </div>
             <p className="description">{movie.description}</p>
             <p className="genres flex gap-10">
               {movie.genre.map((genre, index) => (
@@ -50,7 +52,7 @@ function MovieDetails() {
               ))}
             </p>
             <button className='flex play-btn'>
-              <FaPlay />
+              <FaPlay className='play-icon'/>
               <span>Play movie</span>
             </button>
           </div>
