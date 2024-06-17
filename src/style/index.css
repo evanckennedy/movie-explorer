@@ -94,15 +94,15 @@ img {
 
   h2 {
     font-weight: 500;
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 }
 
 .sort-btn {
-  width: 10rem;
-  height: 4rem;
+  width: 9rem;
+  height: 3.6rem;
   border-radius: 0.5rem;
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-weight: 500;
   transition: background-color 0.25s ease-in-out;
 }
