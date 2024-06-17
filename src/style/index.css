@@ -33,7 +33,6 @@
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*  Base                                                 */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-
 :root {
   --app-background-dark: rgb(24, 23, 32);
   --white: #f5f5f6;
@@ -84,6 +83,36 @@ img {
   border-radius: 0.5rem;
 }
 
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/*  Sorting section                                      */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+.sorting-container {
+  width: 100%;
+  justify-content: end;
+  margin-bottom: 2rem;
+}
+
+.sort-btn {
+  width: 10rem;
+  height: 4rem;
+  border-radius: 0.5rem;
+  font-size: 2rem;
+  font-weight: 500;
+  transition: background-color 0.25s ease-in-out;
+}
+
+.title-btn {
+  background-color: var(--blue);
+  color: var(--white);
+  &:hover {
+    background-color: #1b89ff;
+  }
+}
+
+.year-btn {
+  background-color: var(--white);
+  color: var(--blue);
+}
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*  Movies grid                                          */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */

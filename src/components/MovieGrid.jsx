@@ -22,6 +22,11 @@ function MovieGrid() {
 
   return (
     <>
+      <div className="sorting-container flex gap-10">
+        <h2>Sort:</h2>
+        <button className="sort-btn title-btn center">By title</button>
+        <button className="sort-btn year-btn center">By year</button>
+      </div>
       <div className="grid-container">
         {movies.map(movie => (
           <Link to={`/movie/${movie.slug}`} key={movie._id}>
