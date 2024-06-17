@@ -20,12 +20,22 @@ function MovieGrid() {
     getMovies();
   }, []); // Empty dependency array means this effect runs once on mount
 
+  const sortByTitle = () => {
+      const sortedMovies = [...movies].sort((a, b) => a.title.localeCompare(b.title));
+      setMovies(sortedMovies);
+  };
+
+  const sortByYear = () => {
+    const sortedMovies = [...movies].sort((a, b) => a.year - b.year);
+    setMovies(sortedMovies)
+  };
+
   return (
     <>
       <div className="sorting-container flex gap-10">
         <h2>Sort:</h2>
-        <button className="sort-btn title-btn center">By title</button>
-        <button className="sort-btn year-btn center">By year</button>
+        <button className="sort-btn title-btn center" onClick={sortByTitle}>By title</button>
+        <button className="sort-btn year-btn center" onClick={sortByYear}>By year</button>
       </div>
       <div className="grid-container">
         {movies.map(movie => (
