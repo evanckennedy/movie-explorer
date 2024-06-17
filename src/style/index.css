@@ -49,6 +49,10 @@ body {
   margin-inline: auto;
 }
 
+main {
+  margin-bottom: 6rem;
+}
+
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*  Header                                               */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
