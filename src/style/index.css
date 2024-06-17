@@ -124,6 +124,11 @@ img {
 
 .column {
   cursor: pointer;
+  transition: transform 0.25s ease-in-out;
+}
+
+.column:hover {
+  transform: translateY(-0.5rem);
 }
 
 .content-container {
