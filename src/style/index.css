@@ -134,6 +134,12 @@ a, a:visited {
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*  Movie details                                        */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+.movie-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .information-container {
   flex: 1;
   max-width: 60rem;
