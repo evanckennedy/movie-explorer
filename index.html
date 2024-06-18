@@ -11,7 +11,18 @@
     <meta name="theme-color" content="#000000" />
     <style>
       body {
-        background-color: rgb(24, 23, 32);
+        /* 
+          This CSS rule applies a semi-transparent black overlay on top of the 
+          background image using a linear gradient. The gradient uses the same 
+          color (black with 85% opacity) for both start and end, creating a 
+          uniform darkening effect across the image. 
+        */
+        background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(./src/media/bg-blur.jpg) center / cover no-repeat fixed; 
+        /* 
+          'fixed' Makes the background relative to the viewpotn, meaning it
+          won't move or scale when the content scrolls or when the viewport size 
+          changes 
+        */
       }
     </style>
     <title>Movie Explorer</title>
