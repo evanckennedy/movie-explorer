@@ -52,6 +52,11 @@ main {
   margin-bottom: 6rem;
 }
 
+/* prevent layout shifts due to scrollbar appearing/disappearing */
+html {
+  scrollbar-gutter: stable;
+}
+
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*  Header                                               */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
